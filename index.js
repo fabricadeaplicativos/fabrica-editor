@@ -1,23 +1,38 @@
-var express = require('express');
-var app = express();
-var server = require('http').createServer(app);
-var io = require('socket.io')(server);
+// native deps
+var path = require('path');
 
-var IO_NAMESPACE = '/canvas';
+// external deps
 
-// oi
 
-// Listen to port 3000
-server.listen(3000, function() {
-	console.log("Server Running...");
+// internal deps
+var createMarkedHtmlServer = require('./lib/create-marked-html-server'),
+	createSocketServer = require('./lib/create-socket-server'),
+	createBracketsServer = require('./lib/create-brackets-server');
+
+
+/////////////////////
+// Create the marked html server
+createMarkedHtmlServer({
+	port: 3000,
+	
+	root: path.join(__dirname, 'web/app-source/www'),
+	xPathAttribute: 'data-x-path',
+	fnameAttribute: 'data-fname'
 });
 
-io.of(IO_NAMESPACE).on('connection', function(socket) {
-	console.log("Connection accepted on Canvas Socket");
+/////////////////
+// Create the socket server
+createSocketServer({
+	port: 4000,
 
-	socket.on('send message', function(message) {
-		console.log('Sending message to sockets: ' + message);
+	socketNamespace: '/canvas',
+})
 
-		socket.broadcast.emit('show alert', message);
-	});
+
+/////////////////
+// Create the brackets editor server
+createBracketsServer({
+	port: 8000,
+	projectsDir: path.join(__dirname, 'web'),
+	supportDir: path.join(__dirname, 'web/support')
 });
