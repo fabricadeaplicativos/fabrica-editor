@@ -1,0 +1,1 @@
+define("main",["require","exports","module"],function(){var e=brackets.getModule("language/LanguageManager");e.defineLanguage("less",{name:"LESS",mode:["css","text/x-less"],fileExtensions:["less"],blockComment:["/*","*/"],lineComment:["//"]}).done(function(e){e._setLanguageForMode("css",e)})});

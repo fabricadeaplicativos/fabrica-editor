@@ -9,9 +9,6 @@ var fs          = require("fs"),
     sampRoot    = "/samples/",
     projRoot    = "/projects/";
 
-
-var watch = require('watch');
-
 function resolvePath(reqPath, context, callback) {
     var extRoot = context.httpRoot + "/extensions/",
         userExt = context.httpRoot + "/extensions/user",

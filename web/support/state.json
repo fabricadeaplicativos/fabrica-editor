@@ -1133,7 +1133,15 @@
             }
         },
         "/projects/app-source/": {
-            "project.treeState": []
+            "project.treeState": [],
+            "mainView.state": {
+                "orientation": null,
+                "activePaneId": "first-pane",
+                "splitPercentage": 1,
+                "panes": {
+                    "first-pane": []
+                }
+            }
         }
     },
     "recentProjects": [

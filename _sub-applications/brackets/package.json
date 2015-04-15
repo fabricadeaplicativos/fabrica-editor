@@ -23,15 +23,14 @@
     "brackets-server": "./bin/run.js"
   },
   "dependencies": {
-    "commander": "^2.3.0",
-    "glob": "^4.0.6",
-    "mkdirp": "^0.5.0",
-    "ncp": "^1.0.0",
-    "open": "^0.0.5",
-    "rimraf": "^2.2.8",
     "send": "^0.9.3",
-    "socket.io": "1.1.0",
-    "watch": "^0.14.0"
+    "mkdirp": "^0.5.0",
+    "rimraf": "^2.2.8",
+    "ncp": "^1.0.0",
+    "commander": "^2.3.0",
+    "open": "^0.0.5",
+    "socket.io": "^1.1.0",
+    "glob": "^4.0.6"
   },
   "devDependencies": {
     "mocha": "*",
@@ -113,6 +112,5 @@
     "tarball": "http://registry.npmjs.org/brackets/-/brackets-0.5.7.tgz"
   },
   "directories": {},
-  "_resolved": "https://registry.npmjs.org/brackets/-/brackets-0.5.7.tgz",
-  "readme": "ERROR: No README data found!"
+  "_resolved": "https://registry.npmjs.org/brackets/-/brackets-0.5.7.tgz"
 }

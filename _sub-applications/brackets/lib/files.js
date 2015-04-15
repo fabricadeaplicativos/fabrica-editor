@@ -1,13 +1,5 @@
 "use strict";
 
-var watch = require('watch');
-
-var nodeFS = require('fs');
-var nodePATH = require('path');
-
-// declare a var to store reference to the socket
-var SOCKET;
-
 function init(srv) {
     var fs = srv.fileSystem;
 
@@ -103,43 +95,10 @@ function init(srv) {
     }
 
     function watchPath(req, callback) {
-
         fs.resolvePath(req, srv, function (err, path) {
-
             if (err) {
                 return callback(err);
             }
-
-
-            // watch files
-            watch.watchTree(path, function (f, curr, prev) {
-
-                if (typeof f == "object" && prev === null && curr === null) {
-                  // Finished walking the tree
-                } else if (prev === null) {
-                  // f is a new file
-                  SOCKET.emit('created', 'hey')
-                } else if (curr.nlink === 0) {
-                  // f was removed
-                  SOCKET.emit('removed', 'hey')
-                } else {
-                  // f was changed
-                  SOCKET.emit('changed', "hey!");
-
-                  console.log(srv);
-
-                  console.log(f);
-
-                  console.log('relative')
-                  console.log(nodePATH.relative(nodePATH.resolve(srv.projectsDir, '..'), f));
-
-                  console.log(nodeFS.readFileSync(f, {
-                    encoding: 'utf8'
-                  }));
-                }
-            });
-
-
 
             fs.watchPath(path, callback);
         });
@@ -181,12 +140,7 @@ function init(srv) {
     }
 
     function onConnection (socket) {
-        // set socket
-        SOCKET = socket; 
-
-
         socket.emit("greeting", "hi");
-
 
         socket
             .on("stat", stat)

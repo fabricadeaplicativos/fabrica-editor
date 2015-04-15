@@ -1,7 +1,0 @@
-{
-    "search": {
-        "scope": "project",
-        "excludeFolders": ["node_modules", "brackets-src", "brackets-dist", "brackets-srv", "brackets", "new-project"],
-        "excludeFiles": [".html"]
-    }
-}
