@@ -5,6 +5,8 @@ var io = require('socket.io')(server);
 
 var IO_NAMESPACE = '/canvas';
 
+// oi
+
 // Listen to port 3000
 server.listen(3000, function() {
 	console.log("Server Running...");
