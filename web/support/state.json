@@ -5,7 +5,7 @@
     "welcomeProjects": [
         "/samples/root/Getting Started"
     ],
-    "projectPath": "/projects/app-source/",
+    "projectPath": "/projects/",
     "afterFirstLaunch": "true",
     "workingSetSortMethod": "cmd.sortWorkingSetByAdded",
     "lastInfoURLFetchTime": 1429119378312,
@@ -1133,7 +1133,146 @@
             }
         },
         "/projects/app-source/": {
-            "project.treeState": [],
+            "project.treeState": [
+                [
+                    "/projects/app-source/scss/",
+                    "/projects/app-source/www/"
+                ],
+                [
+                    "/projects/app-source/www/templates/"
+                ]
+            ],
+            "mainView.state": {
+                "orientation": null,
+                "activePaneId": "first-pane",
+                "splitPercentage": 1,
+                "panes": {
+                    "first-pane": [
+                        {
+                            "file": "/projects/app-source/www/index.html",
+                            "active": false,
+                            "viewState": {
+                                "selections": [
+                                    {
+                                        "start": {
+                                            "line": 5,
+                                            "ch": 6
+                                        },
+                                        "end": {
+                                            "line": 5,
+                                            "ch": 6
+                                        },
+                                        "reversed": false,
+                                        "primary": true
+                                    }
+                                ],
+                                "scrollPos": {
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            }
+                        },
+                        {
+                            "file": "/projects/app-source/www/templates/playlists.html",
+                            "active": false,
+                            "viewState": {
+                                "selections": [
+                                    {
+                                        "start": {
+                                            "line": 4,
+                                            "ch": 26
+                                        },
+                                        "end": {
+                                            "line": 4,
+                                            "ch": 26
+                                        },
+                                        "reversed": false,
+                                        "primary": true
+                                    }
+                                ],
+                                "scrollPos": {
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            }
+                        },
+                        {
+                            "file": "/projects/app-source/www/templates/menu.html",
+                            "active": false,
+                            "viewState": {
+                                "selections": [
+                                    {
+                                        "start": {
+                                            "line": 20,
+                                            "ch": 13
+                                        },
+                                        "end": {
+                                            "line": 20,
+                                            "ch": 17
+                                        },
+                                        "reversed": false,
+                                        "primary": true
+                                    }
+                                ],
+                                "scrollPos": {
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            }
+                        },
+                        {
+                            "file": "/projects/app-source/www/templates/browse.html",
+                            "active": false,
+                            "viewState": {
+                                "selections": [
+                                    {
+                                        "start": {
+                                            "line": 2,
+                                            "ch": 13
+                                        },
+                                        "end": {
+                                            "line": 2,
+                                            "ch": 13
+                                        },
+                                        "reversed": false,
+                                        "primary": true
+                                    }
+                                ],
+                                "scrollPos": {
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            }
+                        },
+                        {
+                            "file": "/projects/app-source/www/templates/login.html",
+                            "active": true,
+                            "viewState": {
+                                "selections": [
+                                    {
+                                        "start": {
+                                            "line": 25,
+                                            "ch": 0
+                                        },
+                                        "end": {
+                                            "line": 25,
+                                            "ch": 0
+                                        },
+                                        "reversed": false,
+                                        "primary": true
+                                    }
+                                ],
+                                "scrollPos": {
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "/projects/": {
             "mainView.state": {
                 "orientation": null,
                 "activePaneId": "first-pane",
@@ -1141,10 +1280,22 @@
                 "panes": {
                     "first-pane": []
                 }
-            }
+            },
+            "project.treeState": [
+                [
+                    "/projects/merchant-client/"
+                ],
+                [
+                    "/projects/merchant-client/www/"
+                ],
+                [
+                    "/projects/merchant-client/www/templates/"
+                ]
+            ]
         }
     },
     "recentProjects": [
+        "/projects",
         "/projects/app-source",
         "/samples/root/Getting Started"
     ]
