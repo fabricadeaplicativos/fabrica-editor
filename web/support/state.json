@@ -8,7 +8,7 @@
     "projectPath": "/projects/app-source/",
     "afterFirstLaunch": "true",
     "workingSetSortMethod": "cmd.sortWorkingSetByAdded",
-    "lastInfoURLFetchTime": 1429119378312,
+    "lastInfoURLFetchTime": 1429206622779,
     "updateInfo": [
         {
             "buildNumber": 15697,
@@ -1174,19 +1174,19 @@
                         },
                         {
                             "file": "/projects/app-source/www/templates/playlists.html",
-                            "active": true,
+                            "active": false,
                             "viewState": {
                                 "selections": [
                                     {
                                         "start": {
-                                            "line": 4,
-                                            "ch": 20
+                                            "line": 3,
+                                            "ch": 14
                                         },
                                         "end": {
-                                            "line": 4,
-                                            "ch": 21
+                                            "line": 3,
+                                            "ch": 14
                                         },
-                                        "reversed": true,
+                                        "reversed": false,
                                         "primary": true
                                     }
                                 ],
@@ -1198,17 +1198,17 @@
                         },
                         {
                             "file": "/projects/app-source/www/templates/menu.html",
-                            "active": false,
+                            "active": true,
                             "viewState": {
                                 "selections": [
                                     {
                                         "start": {
-                                            "line": 26,
-                                            "ch": 8
+                                            "line": 19,
+                                            "ch": 15
                                         },
                                         "end": {
-                                            "line": 26,
-                                            "ch": 8
+                                            "line": 19,
+                                            "ch": 15
                                         },
                                         "reversed": false,
                                         "primary": true
@@ -1228,11 +1228,11 @@
                                     {
                                         "start": {
                                             "line": 2,
-                                            "ch": 13
+                                            "ch": 15
                                         },
                                         "end": {
                                             "line": 2,
-                                            "ch": 13
+                                            "ch": 15
                                         },
                                         "reversed": false,
                                         "primary": true
@@ -1395,5 +1395,6 @@
         "/projects/app-source",
         "/projects",
         "/samples/root/Getting Started"
-    ]
+    ],
+    "livedev.afterFirstLaunch": "true"
 }

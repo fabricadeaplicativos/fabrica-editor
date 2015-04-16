@@ -1,0 +1,15 @@
+{
+  "name": "assets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "brackets-socket-connection.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "domlight": "^0.1.1",
+    "domlight.js": "^1.1.0"
+  }
+}

@@ -10,12 +10,18 @@ var createMarkedHtmlServer = require('./lib/create-marked-html-server'),
 	createBracketsServer = require('./lib/create-brackets-server');
 
 
+// global options
+var globalOptions = {
+	projectsDir: path.join(__dirname, 'web')
+}
+
+
 /////////////////////
 // Create the marked html server
 createMarkedHtmlServer({
 	port: 3000,
 	
-	root: path.join(__dirname, 'web/app-source/www'),
+	root: globalOptions.projectsDir,
 	xPathAttribute: 'data-x-path',
 	fnameAttribute: 'data-fname'
 });
@@ -26,13 +32,18 @@ createSocketServer({
 	port: 4000,
 
 	socketNamespace: '/canvas',
-})
+
+	// global
+	projectsDir: globalOptions.projectsDir
+});
 
 
 /////////////////
 // Create the brackets editor server
 createBracketsServer({
 	port: 8000,
-	projectsDir: path.join(__dirname, 'web'),
-	supportDir: path.join(__dirname, 'web/support')
+	supportDir: path.join(__dirname, 'web/support'),
+
+	// global
+	projectsDir: globalOptions.projectsDir
 });
