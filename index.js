@@ -6,7 +6,7 @@ var path = require('path');
 
 // internal deps
 var createMarkedHtmlServer = require('./lib/create-marked-html-server'),
-	createSocketServer = require('./lib/create-socket-server'),
+	createSocketServer = require('./lib/socket-server'),
 	createBracketsServer = require('./lib/create-brackets-server');
 
 
