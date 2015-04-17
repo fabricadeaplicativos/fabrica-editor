@@ -43,6 +43,10 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
     { title: 'Cowbell', id: 6 }
   ];
 
+  $scope.alertPlaylistTitle = function (playlist) {
+    alert(playlist.title);
+  }
+
   $scope.takePicture = function() {
         var options = {
           quality: 50,

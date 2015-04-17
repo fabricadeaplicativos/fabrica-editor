@@ -47,40 +47,40 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
     alert(playlist.title);
   }
 
-  $scope.takePicture = function() {
-        var options = {
-          quality: 50,
-          allowEdit: true,
-          targetWidth: 100,
-          targetHeight: 100,
-          saveToPhotoAlbum: false
-        };
+  $scope.takePicture = function(playlist) {
+    var options = {
+      quality: 50,
+      allowEdit: true,
+      targetWidth: 100,
+      targetHeight: 100,
+      saveToPhotoAlbum: false
+    };
 
-        $cordovaCamera.getPicture(options)
-            .then(function(imageData) {
-                var image = document.getElementsByClassName('full-image');
-                image.src = "data:image/jpeg;base64," + imageData;
-            }, function(error) {
-                console.log(error);
-            });
+    $cordovaCamera
+      .getPicture(options)
+      .then(function(imageData) {
+        playlist.image = "data:image/jpeg;base64," + imageData;
+      }, function(error) {
+        console.warn(error);
+      });
     }
 
-    $scope.pickImage = function() {
-        var options = {
-            maximumImagesCount: 10,
-            width: 800,
-            height: 800,
-            quality: 80
-        };
+    // $scope.pickImage = function() {
+    //     var options = {
+    //         maximumImagesCount: 10,
+    //         width: 800,
+    //         height: 800,
+    //         quality: 80
+    //     };
 
-        $cordovaImagePicker.getPictures(options)
-            .then(function (results) {
-                var image = document.getElementsByClassName('full-image');
-                image.src = resutls[0];
-            }, function(error) {
-              // error getting photos
-            });
-    }
+    //     $cordovaImagePicker.getPictures(options)
+    //         .then(function (results) {
+    //             var image = document.getElementsByClassName('full-image');
+    //             image.src = resutls[0];
+    //         }, function(error) {
+    //           // error getting photos
+    //         });
+    // }
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
