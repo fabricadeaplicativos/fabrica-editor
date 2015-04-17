@@ -2,13 +2,12 @@
 var path = require('path');
 
 // external deps
-var deployd = require('deployd');
 
 // internal deps
 var createMarkedHtmlServer = require('./lib/create-marked-html-server'),
 	createSocketServer = require('./lib/socket-server'),
-	createBracketsServer = require('./lib/create-brackets-server');
-
+	createBracketsServer = require('./lib/create-brackets-server'),
+	createDeploydServer = require('./lib/create-deployd-server');
 
 // global options
 var globalOptions = {
@@ -49,7 +48,7 @@ createBracketsServer({
 	projectsDir: globalOptions.projectsDir
 });
 
-var options = {
+createDeploydServer({
 	port: 3051,
 	env: 'development', 
 	db: {
@@ -57,12 +56,4 @@ var options = {
 		port: 27017,
 		name: 'dpd'
 	}
-};
-
-var server = deployd(options);
-
-server.listen();
-
-server.on('listening', function() {
-	console.log('Server is listening');
 });
