@@ -1,0 +1,96 @@
+<!-- <div 
+	ng-init="petId = 'a131627b4d66a8e9';"
+
+	fab-data="pet" 
+	fab-data-src="{{ apiBaseUrl }}pets/{{ petId }}"
+>
+
+	<h1>{{ pet.name }}</h1>
+	<h2>{{ pet.id }}</h2>
+
+
+	<form>
+		<input ng-model="pet.name">
+
+
+		<button type="submit">send</button>
+	</form>
+</div>
+ -->
+
+
+ <fab-data 
+ 	fab-data-property="fabs" 
+ 	fab-data-src="http://localhost:2403/pessoasfabrica"
+ >
+ 	<ul>
+ 		<li ng-repeat="pessoasfabrica in fabs">
+ 			<h1>{{ pessoasfabrica.nome }}</h1>
+ 			<h2>{{ pessoasfabrica.id }}</h2>
+ 			<h2>{{ pessoasfabrica.idade }}</h2>
+ 		</li>
+ 	</ul>
+ </fab-data>
+
+
+
+
+ <fab-data 
+ 	fab-data-property="achou" 
+ 	fab-data-src="http://m.app.vc/api/moblet/844294?img_width=256
+ "
+ >
+ 	<div  ng-repeat="i in achou.items">
+
+ 		<div class="list card">
+
+ 		  <div class="item item-avatar">
+ 		    <img src="avatar.jpg">
+ 		    <h2>{{ i.item.title }}</h2>
+ 		    <p>{{ i.item.description }}</p>
+ 		  </div>
+
+ 		  <div class="item item-image">
+ 		    <!-- <img src="cover.jpg"> -->
+ 		  </div>
+
+ 		  <a class="item item-icon-left assertive" href="#">
+ 		    <i class="icon ion-music-note"></i>
+ 		    Start listening
+ 		  </a>
+
+ 		</div>
+ 	</div>
+ </fab-data>
+
+
+<fab-data 
+	fab-data-property="pets" 
+	fab-data-src="http://localhost:2403/pet"
+>
+	<ul>
+		<li ng-repeat="pet in pets">
+			<h1>{{ pet.nome }}</h1>
+			<h2>{{ pet.id }}</h2>
+		</li>
+	</ul>
+</fab-data>
+
+
+<div 
+	ng-click="addStrength()"
+	fab-data="pet" 
+	fab-data-src="http://localhost:2403/pet/57ceee9bc8aab87f"
+>
+
+	<h1>{{ pet.nome }}</h1>
+	<h2>{{ pet.id }}</h2>
+
+
+	<form>
+		<input ng-model="pet.nome">
+
+
+		<button type="submit">send</button>
+	</form>
+</div>

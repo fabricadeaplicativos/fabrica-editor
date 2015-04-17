@@ -1,0 +1,12 @@
+
+<fab-data 
+	fab-data-property="designBlog" 
+	fab-data-src="http://feeds.feedburner.com/DesignOnTheRocks"
+>
+	<ul>
+		<li ng-repeat="pet in pets">
+			<h1>{{ pet.nome }}</h1>
+			<h2>{{ pet.id }}</h2>
+		</li>
+	</ul>
+</fab-data>

@@ -34,17 +34,21 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
 })
 
 .controller('PlaylistsCtrl', function($scope, $cordovaCamera, $cordovaImagePicker) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
+  // $scope.playlists = [
+  //   { title: 'Reggae', id: 1 },
+  //   { title: 'Chill', id: 2 },
+  //   { title: 'Dubstep', id: 3 },
+  //   { title: 'Indie', id: 4 },
+  //   { title: 'Rap', id: 5 },
+  //   { title: 'Cowbell', id: 6 }
+  // ];
 
   $scope.alertPlaylistTitle = function (playlist) {
     alert(playlist.title);
+  }
+
+  $scope.banana = function (frase) {
+    alert(frase);
   }
 
   $scope.takePicture = function(playlist) {
