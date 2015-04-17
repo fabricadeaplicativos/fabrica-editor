@@ -50,7 +50,8 @@ createBracketsServer({
 });
 
 var options = {
-	port: 3051, 
+	port: 3051,
+	env: 'development', 
 	db: {
 		host: 'localhost',
 		port: 27017,
