@@ -5,7 +5,7 @@
     "welcomeProjects": [
         "/samples/root/Getting Started"
     ],
-    "projectPath": "/projects/",
+    "projectPath": "/projects/app-source/",
     "afterFirstLaunch": "true",
     "workingSetSortMethod": "cmd.sortWorkingSetByAdded",
     "lastInfoURLFetchTime": 1429277390601,
@@ -1120,7 +1120,11 @@
     ],
     "lastNotifiedBuildNumber": 15697,
     "extensionUpdateInfo": [],
+<<<<<<< HEAD
     "lastExtensionRegistryCheckTime": 1429205990205,
+=======
+    "lastExtensionRegistryCheckTime": 1429205993302,
+>>>>>>> e0725da07193c6c1db8e927c61f357481fcd83d4
     "project": {
         "/samples/root/Getting Started/": {
             "mainView.state": {
@@ -1179,12 +1183,12 @@
                                 "selections": [
                                     {
                                         "start": {
-                                            "line": 4,
-                                            "ch": 26
+                                            "line": 3,
+                                            "ch": 14
                                         },
                                         "end": {
-                                            "line": 4,
-                                            "ch": 26
+                                            "line": 3,
+                                            "ch": 14
                                         },
                                         "reversed": false,
                                         "primary": true
@@ -1198,17 +1202,17 @@
                         },
                         {
                             "file": "/projects/app-source/www/templates/menu.html",
-                            "active": false,
+                            "active": true,
                             "viewState": {
                                 "selections": [
                                     {
                                         "start": {
-                                            "line": 20,
-                                            "ch": 13
+                                            "line": 19,
+                                            "ch": 15
                                         },
                                         "end": {
-                                            "line": 20,
-                                            "ch": 17
+                                            "line": 19,
+                                            "ch": 15
                                         },
                                         "reversed": false,
                                         "primary": true
@@ -1228,11 +1232,11 @@
                                     {
                                         "start": {
                                             "line": 2,
-                                            "ch": 13
+                                            "ch": 15
                                         },
                                         "end": {
                                             "line": 2,
-                                            "ch": 13
+                                            "ch": 15
                                         },
                                         "reversed": false,
                                         "primary": true
@@ -1246,7 +1250,7 @@
                         },
                         {
                             "file": "/projects/app-source/www/templates/login.html",
-                            "active": true,
+                            "active": false,
                             "viewState": {
                                 "selections": [
                                     {
@@ -1256,6 +1260,30 @@
                                         },
                                         "end": {
                                             "line": 25,
+                                            "ch": 0
+                                        },
+                                        "reversed": false,
+                                        "primary": true
+                                    }
+                                ],
+                                "scrollPos": {
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            }
+                        },
+                        {
+                            "file": "/projects/app-source/scss/ionic.app.scss",
+                            "active": false,
+                            "viewState": {
+                                "selections": [
+                                    {
+                                        "start": {
+                                            "line": 23,
+                                            "ch": 0
+                                        },
+                                        "end": {
+                                            "line": 23,
                                             "ch": 0
                                         },
                                         "reversed": false,
@@ -1278,7 +1306,80 @@
                 "activePaneId": "first-pane",
                 "splitPercentage": 1,
                 "panes": {
-                    "first-pane": []
+                    "first-pane": [
+                        {
+                            "file": "/projects/merchant-client/www/templates/payments.html",
+                            "active": false,
+                            "viewState": {
+                                "selections": [
+                                    {
+                                        "start": {
+                                            "line": 29,
+                                            "ch": 24
+                                        },
+                                        "end": {
+                                            "line": 29,
+                                            "ch": 24
+                                        },
+                                        "reversed": false,
+                                        "primary": true
+                                    }
+                                ],
+                                "scrollPos": {
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            }
+                        },
+                        {
+                            "file": "/projects/merchant-client/www/templates/side-menu.html",
+                            "active": false,
+                            "viewState": {
+                                "selections": [
+                                    {
+                                        "start": {
+                                            "line": 0,
+                                            "ch": 0
+                                        },
+                                        "end": {
+                                            "line": 0,
+                                            "ch": 0
+                                        },
+                                        "reversed": false,
+                                        "primary": true
+                                    }
+                                ],
+                                "scrollPos": {
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            }
+                        },
+                        {
+                            "file": "/projects/merchant-client/www/templates/registration.html",
+                            "active": false,
+                            "viewState": {
+                                "selections": [
+                                    {
+                                        "start": {
+                                            "line": 22,
+                                            "ch": 31
+                                        },
+                                        "end": {
+                                            "line": 22,
+                                            "ch": 36
+                                        },
+                                        "reversed": false,
+                                        "primary": true
+                                    }
+                                ],
+                                "scrollPos": {
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            }
+                        }
+                    ]
                 }
             },
             "project.treeState": [
@@ -1289,8 +1390,9 @@
         }
     },
     "recentProjects": [
-        "/projects",
         "/projects/app-source",
+        "/projects",
         "/samples/root/Getting Started"
-    ]
+    ],
+    "livedev.afterFirstLaunch": "true"
 }

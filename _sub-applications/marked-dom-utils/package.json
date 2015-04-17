@@ -1,0 +1,17 @@
+{
+  "name": "marked-dom-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "domhandler": "git://github.com/simonfan/domhandler.git",
+    "domutils": "^1.5.1",
+    "htmlparser2": "^3.8.2",
+    "lodash": "^3.7.0"
+  }
+}
