@@ -2,7 +2,7 @@
 var path = require('path');
 
 // external deps
-
+var deployd = require('deployd');
 
 // internal deps
 var createMarkedHtmlServer = require('./lib/create-marked-html-server'),
@@ -35,4 +35,21 @@ createBracketsServer({
 	port: 8000,
 	projectsDir: path.join(__dirname, 'web'),
 	supportDir: path.join(__dirname, 'web/support')
+});
+
+var options = {
+	port: 3051, 
+	db: {
+		host: 'localhost',
+		port: 27017,
+		name: 'dpd'
+	}
+};
+
+var server = deployd(options);
+
+server.listen();
+
+server.on('listening', function() {
+	console.log('Server is listening');
 });

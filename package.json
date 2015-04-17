@@ -18,6 +18,7 @@
   "homepage": "https://github.com/renansdias/fab-main-server",
   "dependencies": {
     "brackets": "^0.5.7",
+    "deployd": "^0.8.0",
     "express": "^4.12.3",
     "lodash": "^3.6.0",
     "send-marked-html": "git://github.com/simonfan/send-marked-html.git",
