@@ -1,3 +1,5 @@
 {
-    "debug.showErrorsInStatusBar": false
+    "debug.showErrorsInStatusBar": false,
+    "useTabChar": false,
+    "spaceUnits": 2
 }

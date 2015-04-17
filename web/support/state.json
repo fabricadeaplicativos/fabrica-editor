@@ -1174,17 +1174,17 @@
                         },
                         {
                             "file": "/projects/app-source/www/templates/playlists.html",
-                            "active": false,
+                            "active": true,
                             "viewState": {
                                 "selections": [
                                     {
                                         "start": {
-                                            "line": 3,
-                                            "ch": 14
+                                            "line": 8,
+                                            "ch": 1
                                         },
                                         "end": {
-                                            "line": 3,
-                                            "ch": 14
+                                            "line": 8,
+                                            "ch": 1
                                         },
                                         "reversed": false,
                                         "primary": true
@@ -1198,17 +1198,17 @@
                         },
                         {
                             "file": "/projects/app-source/www/templates/menu.html",
-                            "active": true,
+                            "active": false,
                             "viewState": {
                                 "selections": [
                                     {
                                         "start": {
-                                            "line": 19,
-                                            "ch": 15
+                                            "line": 2,
+                                            "ch": 4
                                         },
                                         "end": {
-                                            "line": 19,
-                                            "ch": 15
+                                            "line": 2,
+                                            "ch": 4
                                         },
                                         "reversed": false,
                                         "primary": true
@@ -1216,7 +1216,7 @@
                                 ],
                                 "scrollPos": {
                                     "x": 0,
-                                    "y": 0
+                                    "y": 42
                                 }
                             }
                         },
