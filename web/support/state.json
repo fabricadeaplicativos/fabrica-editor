@@ -8,7 +8,7 @@
     "projectPath": "/projects/app-source/",
     "afterFirstLaunch": "true",
     "workingSetSortMethod": "cmd.sortWorkingSetByAdded",
-    "lastInfoURLFetchTime": 1429206622779,
+    "lastInfoURLFetchTime": 1429277390601,
     "updateInfo": [
         {
             "buildNumber": 15697,
@@ -1120,7 +1120,11 @@
     ],
     "lastNotifiedBuildNumber": 15697,
     "extensionUpdateInfo": [],
+<<<<<<< HEAD
+    "lastExtensionRegistryCheckTime": 1429205990205,
+=======
     "lastExtensionRegistryCheckTime": 1429205993302,
+>>>>>>> e0725da07193c6c1db8e927c61f357481fcd83d4
     "project": {
         "/samples/root/Getting Started/": {
             "mainView.state": {
@@ -1380,13 +1384,7 @@
             },
             "project.treeState": [
                 [
-                    "/projects/merchant-client/"
-                ],
-                [
-                    "/projects/merchant-client/www/"
-                ],
-                [
-                    "/projects/merchant-client/www/templates/"
+                    "/projects/app-source/"
                 ]
             ]
         }

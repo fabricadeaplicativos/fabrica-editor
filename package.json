@@ -18,6 +18,7 @@
   "homepage": "https://github.com/renansdias/fab-main-server",
   "dependencies": {
     "brackets": "^0.5.7",
+    "deployd": "^0.8.0",
     "domhandler": "git://github.com/simonfan/domhandler.git",
     "domutils": "^1.5.1",
     "express": "^4.12.3",
