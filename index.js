@@ -27,13 +27,13 @@ function startEditor(options) {
 	}
 
 	// stylesheets to be injected
-	var injectStylesheets = [
+	var baseInjectStylesheets = [
 		// context menu
 		'http://localhost:' + PORTS.socketServer + '/assets/bower_components/jQuery-contextMenu/src/jquery.contextMenu.css'
-	].concat(options.injectStylesheets);
+	];
 
 	// Scripts to be injected into the markedHTML
-	var injectScripts = [
+	var baseInjectScripts = [
 		// jquery and lodash
 		'http://localhost:' + PORTS.socketServer + '/assets/bower_components/jquery/dist/jquery.js',
 		'http://localhost:' + PORTS.socketServer + '/assets/bower_components/lodash/lodash.js',
@@ -49,7 +49,7 @@ function startEditor(options) {
 
 		// socket connection
 		'http://localhost:' + PORTS.socketServer + '/assets/canvas-socket-connection.js'
-	].concat(options.injectScripts);
+	];
 
 
 	/////////////////////
@@ -62,10 +62,10 @@ function startEditor(options) {
 		fnameAttribute: 'data-fname',
 
 		// stylesheets to be injected
-		injectStylesheets: injectStylesheets,
+		injectStylesheets: options.injectStylesheets ? baseInjectStylesheets.concat(options.injectStylesheets) : baseInjectStylesheets,
 
 		// scripts to be injected
-		injectScripts: injectScripts
+		injectScripts: options.injectScripts ? baseInjectScripts.concat(options.injectScripts) : baseInjectScripts
 	});
 
 
