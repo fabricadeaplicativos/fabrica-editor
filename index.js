@@ -26,6 +26,32 @@ function startEditor(options) {
 		throw new Error('"projectsDir" option is required :)')
 	}
 
+	// stylesheets to be injected
+	var injectStylesheets = [
+		// context menu
+		'http://localhost:' + PORTS.socketServer + '/assets/bower_components/jQuery-contextMenu/src/jquery.contextMenu.css'
+	].concat(options.injectStylesheets);
+
+	// Scripts to be injected into the markedHTML
+	var injectScripts = [
+		// jquery and lodash
+		'http://localhost:' + PORTS.socketServer + '/assets/bower_components/jquery/dist/jquery.js',
+		'http://localhost:' + PORTS.socketServer + '/assets/bower_components/lodash/lodash.js',
+		
+		// contextmenu
+		'http://localhost:' + PORTS.socketServer + '/assets/bower_components/jQuery-contextMenu/src/jquery.ui.position.js',
+		'http://localhost:' + PORTS.socketServer + '/assets/bower_components/jQuery-contextMenu/src/jquery.contextMenu.js',
+
+		// socket.io
+		'http://localhost:' + PORTS.socketServer + '/assets/bower_components/socket.io-client/socket.io.js',
+		// domlight
+		'http://localhost:' + PORTS.socketServer + '/assets/node_modules/domlight/domlight.js',
+
+		// socket connection
+		'http://localhost:' + PORTS.socketServer + '/assets/canvas-socket-connection.js'
+	].concat(options.injectScripts);
+
+
 	/////////////////////
 	// Create the marked html server
 	createMarkedHtmlServer({
@@ -36,34 +62,10 @@ function startEditor(options) {
 		fnameAttribute: 'data-fname',
 
 		// stylesheets to be injected
-		injectStylesheets: [
-			// test injection
-			'http://localhost:' + PORTS.socketServer + '/assets/test.css',
-			// context menu
-			'http://localhost:' + PORTS.socketServer + '/assets/bower_components/jQuery-contextMenu/src/jquery.contextMenu.css'
-		],
+		injectStylesheets: injectStylesheets,
 
 		// scripts to be injected
-		injectScripts: [
-			// test injection
-			'http://localhost:' + PORTS.socketServer + '/assets/test.js',
-
-			// jquery and lodash
-			'http://localhost:' + PORTS.socketServer + '/assets/bower_components/jquery/dist/jquery.js',
-			'http://localhost:' + PORTS.socketServer + '/assets/bower_components/lodash/lodash.js',
-			
-			// contextmenu
-			'http://localhost:' + PORTS.socketServer + '/assets/bower_components/jQuery-contextMenu/src/jquery.ui.position.js',
-			'http://localhost:' + PORTS.socketServer + '/assets/bower_components/jQuery-contextMenu/src/jquery.contextMenu.js',
-
-			// socket.io
-			'http://localhost:' + PORTS.socketServer + '/assets/bower_components/socket.io-client/socket.io.js',
-			// domlight
-			'http://localhost:' + PORTS.socketServer + '/assets/node_modules/domlight/domlight.js',
-
-			// socket connection
-			'http://localhost:' + PORTS.socketServer + '/assets/canvas-socket-connection.js'
-		]
+		injectScripts: injectScripts
 	});
 
 
