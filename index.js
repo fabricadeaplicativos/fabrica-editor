@@ -87,6 +87,12 @@ function startEditor(options) {
 		projectsDir: options.projectsDir
 	});
 
+	// return editor configurations
+	return {
+		projectsDir: options.projectsDir,
+		ports: _.clone(PORTS),
+	}
+
 
 	// NEEDS IMPROVEMENT: deployd server
 
