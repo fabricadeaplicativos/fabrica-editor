@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd lib/socket-server/assets
+npm install
+cd ../../../
+cd _sub-applications/marked-dom-utils
+npm install 
