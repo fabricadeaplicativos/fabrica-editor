@@ -5,11 +5,36 @@
     "welcomeProjects": [
         "/samples/root/Getting Started"
     ],
-    "projectPath": "/projects/www/",
+    "projectPath": "/projects/app-source/www/",
     "afterFirstLaunch": "true",
     "workingSetSortMethod": "cmd.sortWorkingSetByAdded",
-    "lastInfoURLFetchTime": 1429808750229,
+    "lastInfoURLFetchTime": 1430138586733,
     "updateInfo": [
+        {
+            "buildNumber": 16022,
+            "versionString": "Release 1.3",
+            "dateString": "04-27-2015",
+            "releaseNotesURL": "https://github.com/adobe/brackets/wiki/Release-Notes:-1.3",
+            "downloadURL": "http://brackets.io",
+            "newFeatures": [
+                {
+                    "name": "Command Line Integration",
+                    "description": "Launch Brackets and open files/folders from the command line on Mac or Windows. Brackets can also integrate with the Windows Explorer context menu. On Windows these are installer options; on Mac, use File > Install Command Line Shortcut to enable."
+                },
+                {
+                    "name": "Code Folding",
+                    "description": "Expand/collapse blocks of code using indicators next to the line numbers, or via keyboard shortcuts."
+                },
+                {
+                    "name": "Fixed Windows Scroll Speed",
+                    "description": "Restores mouse wheel scrolling speed to the behavior of Brackets 1.0."
+                },
+                {
+                    "name": "Brackets Health Report",
+                    "description": "Anonymous data to help improve Brackets. You can preview the data that will be sent, or opt-out if desired. We've gone to great lengths to protect your privacy and maintain transparency - see Help > Health Report for details."
+                }
+            ]
+        },
         {
             "buildNumber": 15697,
             "versionString": "Release 1.2",
@@ -1118,9 +1143,9 @@
             ]
         }
     ],
-    "lastNotifiedBuildNumber": 15697,
+    "lastNotifiedBuildNumber": 16022,
     "extensionUpdateInfo": [],
-    "lastExtensionRegistryCheckTime": 1429808750581,
+    "lastExtensionRegistryCheckTime": 1430138587213,
     "project": {
         "/samples/root/Getting Started/": {
             "mainView.state": {
@@ -1128,10 +1153,182 @@
                 "activePaneId": "first-pane",
                 "splitPercentage": 1,
                 "panes": {
+                    "first-pane": []
+                }
+            }
+        },
+        "/projects/www/": {
+            "project.treeState": [
+                [
+                    "/projects/www/js/",
+                    "/projects/www/templates/"
+                ]
+            ],
+            "mainView.state": {
+                "orientation": null,
+                "activePaneId": "first-pane",
+                "splitPercentage": 1,
+                "panes": {
                     "first-pane": [
                         {
-                            "file": "/samples/root/Getting Started/index.html",
+                            "file": "/projects/app-source/www/templates/playlists.html",
                             "active": true,
+                            "viewState": {
+                                "selections": [
+                                    {
+                                        "start": {
+                                            "line": 13,
+                                            "ch": 52
+                                        },
+                                        "end": {
+                                            "line": 13,
+                                            "ch": 52
+                                        },
+                                        "reversed": false,
+                                        "primary": true
+                                    }
+                                ],
+                                "scrollPos": {
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "/projects/app-source/www/": {
+            "mainView.state": {
+                "orientation": null,
+                "activePaneId": "first-pane",
+                "splitPercentage": 1,
+                "panes": {
+                    "first-pane": [
+                        {
+                            "file": "/projects/app-source/www/index.html",
+                            "active": false,
+                            "viewState": {
+                                "selections": [
+                                    {
+                                        "start": {
+                                            "line": 8,
+                                            "ch": 48
+                                        },
+                                        "end": {
+                                            "line": 8,
+                                            "ch": 48
+                                        },
+                                        "reversed": false,
+                                        "primary": true
+                                    }
+                                ],
+                                "scrollPos": {
+                                    "x": 0,
+                                    "y": 163
+                                }
+                            }
+                        },
+                        {
+                            "file": "/projects/app-source/www/templates/browse.html",
+                            "active": false,
+                            "viewState": {
+                                "selections": [
+                                    {
+                                        "start": {
+                                            "line": 3,
+                                            "ch": 7
+                                        },
+                                        "end": {
+                                            "line": 3,
+                                            "ch": 7
+                                        },
+                                        "reversed": false,
+                                        "primary": true
+                                    }
+                                ],
+                                "scrollPos": {
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            }
+                        },
+                        {
+                            "file": "/projects/app-source/www/templates/playlists.html",
+                            "active": true,
+                            "viewState": {
+                                "selections": [
+                                    {
+                                        "start": {
+                                            "line": 11,
+                                            "ch": 26
+                                        },
+                                        "end": {
+                                            "line": 11,
+                                            "ch": 26
+                                        },
+                                        "reversed": false,
+                                        "primary": true
+                                    }
+                                ],
+                                "scrollPos": {
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            }
+                        },
+                        {
+                            "file": "/projects/app-source/www/js/controllers.js",
+                            "active": false,
+                            "viewState": {
+                                "selections": [
+                                    {
+                                        "start": {
+                                            "line": 65,
+                                            "ch": 0
+                                        },
+                                        "end": {
+                                            "line": 65,
+                                            "ch": 0
+                                        },
+                                        "reversed": false,
+                                        "primary": true
+                                    }
+                                ],
+                                "scrollPos": {
+                                    "x": 0,
+                                    "y": 583
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "project.treeState": [
+                [
+                    "/projects/app-source/www/js/",
+                    "/projects/app-source/www/templates/"
+                ]
+            ]
+        },
+        "/projects/app-source/": {
+            "project.treeState": [
+                [
+                    "/projects/app-source/www/"
+                ],
+                [
+                    "/projects/app-source/www/templates/"
+                ]
+            ],
+            "mainView.state": {
+                "orientation": null,
+                "activePaneId": "first-pane",
+                "splitPercentage": 1,
+                "panes": {
+                    "first-pane": [
+                        {
+                            "file": "/projects/app-source/www/js/controllers.js",
+                            "active": false,
                             "viewState": {
                                 "selections": [
                                     {
@@ -1149,6 +1346,54 @@
                                 ],
                                 "scrollPos": {
                                     "x": 0,
+                                    "y": 627
+                                }
+                            }
+                        },
+                        {
+                            "file": "/projects/app-source/www/templates/playlists.html",
+                            "active": true,
+                            "viewState": {
+                                "selections": [
+                                    {
+                                        "start": {
+                                            "line": 16,
+                                            "ch": 10
+                                        },
+                                        "end": {
+                                            "line": 16,
+                                            "ch": 10
+                                        },
+                                        "reversed": false,
+                                        "primary": true
+                                    }
+                                ],
+                                "scrollPos": {
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            }
+                        },
+                        {
+                            "file": "/projects/app-source/www/templates/menu.html",
+                            "active": false,
+                            "viewState": {
+                                "selections": [
+                                    {
+                                        "start": {
+                                            "line": 20,
+                                            "ch": 14
+                                        },
+                                        "end": {
+                                            "line": 20,
+                                            "ch": 14
+                                        },
+                                        "reversed": false,
+                                        "primary": true
+                                    }
+                                ],
+                                "scrollPos": {
+                                    "x": 0,
                                     "y": 0
                                 }
                             }
@@ -1156,17 +1401,12 @@
                     ]
                 }
             }
-        },
-        "/projects/www/": {
-            "project.treeState": [
-                [
-                    "/projects/www/templates/"
-                ]
-            ]
         }
     },
     "recentProjects": [
-        "/projects/www",
-        "/samples/root/Getting Started"
+        "/projects/app-source/www",
+        "/samples/root/Getting Started",
+        "/projects/app-source",
+        "/projects/www"
     ]
 }

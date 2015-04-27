@@ -15,6 +15,10 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
   $scope.closeLogin = function() {
     $scope.modal.hide();
   };
+    
+$scope.falaAe = function() {
+ alert('oi');   
+};
 
   // Open the login modal
   $scope.login = function() {

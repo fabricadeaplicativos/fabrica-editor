@@ -4,13 +4,13 @@
       Playlists
   </ion-nav-title>
   <ion-content>
-    <ion-list fab-data="playlists" fab-data-src="http://localhost:3051/playlists2">
+    <ion-list fab-data="playlists" fab-data-src="http://localhost:3103/playlists2">
         
         <div class="list card" ng-repeat="playlist in playlists">
 
           <div class="item item-avatar">
-            <img ng-src="{{ playlist.image }}" ng-click="banana('kqkwekqwekqwkeqw')">
-            <h2 ng-click="aaa">{{playlist.title}}</h2>
+            <img ng-src="{{ playlist.image }}" ng-click="takePicture(playlist)">
+            <h2 ng-click="login()">{{playlist.title}}</h2>
             <p ng-click="login()">{{playlist.title}}</p>
           </div>
 
@@ -21,7 +21,7 @@
             </p>
             <p>
               <a href="#" class="subdued">1 Like</a>
-              <a href="#" class="subdued" ng-click="sksk">5 Comments</a>
+              <a href="#" class="subdued" ng-click="takePicture(playlist)">5 Comments</a>
             </p>
           </div>
 

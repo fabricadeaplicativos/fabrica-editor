@@ -1,3 +1,4 @@
 {
-    "debug.showErrorsInStatusBar": false
+    "debug.showErrorsInStatusBar": false,
+    "linting.collapsed": true
 }
