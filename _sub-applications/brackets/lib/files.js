@@ -139,8 +139,46 @@ function init(srv) {
         });
     }
 
+
+    function watchAllFiles(socket) {
+
+        var path = require('path');
+        var fs = require('fs');
+        var watch = require('watch');
+
+        // build absolute path to the projects dir
+        var absoluteProjectsDir = path.join(process.cwd(), srv.projectsDir);
+
+        // watch files
+        watch.watchTree(absoluteProjectsDir, function (f, curr, prev) {
+
+            if (typeof f == "object" && prev === null && curr === null) {
+              // Finished walking the tree
+            } else if (prev === null) {
+              // f is a new file
+              socket.emit('created', 'hey')
+            } else if (curr.nlink === 0) {
+              // f was removed
+              socket.emit('removed', 'hey')
+            } else {
+
+                console.log('file changed')
+
+              // f was changed
+              socket.emit('FILE:change', {
+                fname: path.relative(absoluteProjectsDir, f),
+                contents: fs.readFileSync(f, {
+                  encoding: 'utf8'
+                })
+              });
+            }
+        });
+    }
+
     function onConnection (socket) {
         socket.emit("greeting", "hi");
+
+        watchAllFiles(socket)
 
         socket
             .on("stat", stat)

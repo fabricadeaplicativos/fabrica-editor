@@ -8,7 +8,7 @@
     "projectPath": "/projects/app-source/",
     "afterFirstLaunch": "true",
     "workingSetSortMethod": "cmd.sortWorkingSetByAdded",
-    "lastInfoURLFetchTime": 1429206622779,
+    "lastInfoURLFetchTime": 1429277390601,
     "updateInfo": [
         {
             "buildNumber": 15697,
@@ -1120,7 +1120,11 @@
     ],
     "lastNotifiedBuildNumber": 15697,
     "extensionUpdateInfo": [],
+<<<<<<< HEAD
+    "lastExtensionRegistryCheckTime": 1429205990205,
+=======
     "lastExtensionRegistryCheckTime": 1429205993302,
+>>>>>>> e0725da07193c6c1db8e927c61f357481fcd83d4
     "project": {
         "/samples/root/Getting Started/": {
             "mainView.state": {
@@ -1174,17 +1178,17 @@
                         },
                         {
                             "file": "/projects/app-source/www/templates/playlists.html",
-                            "active": false,
+                            "active": true,
                             "viewState": {
                                 "selections": [
                                     {
                                         "start": {
-                                            "line": 3,
-                                            "ch": 14
+                                            "line": 8,
+                                            "ch": 1
                                         },
                                         "end": {
-                                            "line": 3,
-                                            "ch": 14
+                                            "line": 8,
+                                            "ch": 1
                                         },
                                         "reversed": false,
                                         "primary": true
@@ -1198,17 +1202,17 @@
                         },
                         {
                             "file": "/projects/app-source/www/templates/menu.html",
-                            "active": true,
+                            "active": false,
                             "viewState": {
                                 "selections": [
                                     {
                                         "start": {
-                                            "line": 19,
-                                            "ch": 15
+                                            "line": 2,
+                                            "ch": 4
                                         },
                                         "end": {
-                                            "line": 19,
-                                            "ch": 15
+                                            "line": 2,
+                                            "ch": 4
                                         },
                                         "reversed": false,
                                         "primary": true
@@ -1216,7 +1220,7 @@
                                 ],
                                 "scrollPos": {
                                     "x": 0,
-                                    "y": 0
+                                    "y": 42
                                 }
                             }
                         },
@@ -1380,13 +1384,7 @@
             },
             "project.treeState": [
                 [
-                    "/projects/merchant-client/"
-                ],
-                [
-                    "/projects/merchant-client/www/"
-                ],
-                [
-                    "/projects/merchant-client/www/templates/"
+                    "/projects/app-source/"
                 ]
             ]
         }

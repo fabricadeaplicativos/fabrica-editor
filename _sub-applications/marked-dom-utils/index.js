@@ -88,6 +88,26 @@ function createDomBuilder(options) {
 }
 
 
+function cleanDom(markedDom, attributesToClean) {
+
+	// traverse the dom tree and remove the attributesToClean
+	markedDom.forEach(function (node) {
+		if (node.type === 'tag') {
+			_.each(attributesToClean, function (attribute) {
+				delete node.attribs[attribute];
+			});
+
+			if (node.children.length > 0) {
+				cleanDom(node.children, attributesToClean);
+			}
+		}
+	});
+
+	// return the marked dom itself
+	// return markedDom
+}
+
+
 // exports
 
 /**
@@ -111,6 +131,20 @@ exports.buildMarkedDom = function (html, options) {
 	return domBuilder(html);
 };
 
+
+exports.stringify = function (markedDom, attributesToClean) {
+
+	if (attributesToClean) {
+		cleanDom(markedDom, attributesToClean);
+	}
+
+	return DomUtils.getOuterHTML(markedDom);
+};
+
+
 // simply export domutils stuff
 exports.find = DomUtils.find;
+exports.findOne = DomUtils.findOne;
 exports.findAll = DomUtils.findAll;
+
+// exports.getOuterHTML = DomUtils.getOuterHTML;
