@@ -4,11 +4,13 @@ var path = require('path');
 // external deps
 var _ = require('lodash');
 
+var dpdProxy = require('dpd-proxy');
+
 // internal deps
 var createMarkedHtmlServer = require('./lib/create-marked-html-server'),
 	createSocketServer = require('./lib/socket-server'),
-	createBracketsServer = require('./lib/create-brackets-server'),
-	createDeploydServer = require('./lib/create-deployd-server');
+	createBracketsServer = require('./lib/create-brackets-server');
+	// createDeploydServer = require('./lib/create-deployd-server');
 
 
 
@@ -17,7 +19,8 @@ var PORTS = {
 	markedHtmlServer: 3100,
 	bracketsServer: 3101,
 	socketServer: 3102,
-	deploydServer: 3103
+	deploydProxy: 3103,
+	deploydServer: 3104
 };
 
 function startEditor(options) {
@@ -89,15 +92,18 @@ function startEditor(options) {
 		projectsDir: options.projectsDir
 	});
 
-	// createDeploydServer({
-	// 	port: PORTS.deploydServer,
-	// 	env: 'development', 
-	// 	db: {
-	// 		host: 'localhost',
-	// 		port: 27017,
-	// 		name: 'dpd'
-	// 	}
-	// });
+	// deployd proxy server
+	dpdProxy({
+		proxy: {
+			port: PORTS.deploydProxy,
+			resourcesDirectory: path.join(__dirname, 'resources'),
+		},
+		deployd: {
+			port: PORTS.deploydServer,
+			env: 'development',
+		}
+	});
+
 
 	// return editor configurations
 	return {
