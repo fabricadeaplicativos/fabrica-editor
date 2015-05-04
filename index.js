@@ -96,7 +96,7 @@ function startEditor(options) {
 	dpdProxy({
 		proxy: {
 			port: PORTS.deploydProxy,
-			resourcesDirectory: path.join(__dirname, 'resources'),
+			resourcesDirectory: options.resourcesDirectory,
 		},
 		deployd: {
 			port: PORTS.deploydServer,
