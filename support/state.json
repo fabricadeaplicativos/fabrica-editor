@@ -8,7 +8,7 @@
     "projectPath": "/projects/app-source/",
     "afterFirstLaunch": "true",
     "workingSetSortMethod": "cmd.sortWorkingSetByAdded",
-    "lastInfoURLFetchTime": 1430422331017,
+    "lastInfoURLFetchTime": 1432557803560,
     "updateInfo": [
         {
             "buildNumber": 16022,
@@ -1145,7 +1145,7 @@
     ],
     "lastNotifiedBuildNumber": 16022,
     "extensionUpdateInfo": [],
-    "lastExtensionRegistryCheckTime": 1430422332208,
+    "lastExtensionRegistryCheckTime": 1432557803933,
     "project": {
         "/samples/root/Getting Started/": {
             "mainView.state": {
@@ -1316,10 +1316,6 @@
             "project.treeState": [
                 [
                     "/projects/app-source/www/"
-                ],
-                [
-                    "/projects/app-source/www/js/",
-                    "/projects/app-source/www/templates/"
                 ]
             ],
             "mainView.state": {
@@ -1383,12 +1379,12 @@
                                 "selections": [
                                     {
                                         "start": {
-                                            "line": 21,
-                                            "ch": 12
+                                            "line": 23,
+                                            "ch": 14
                                         },
                                         "end": {
-                                            "line": 21,
-                                            "ch": 12
+                                            "line": 23,
+                                            "ch": 14
                                         },
                                         "reversed": false,
                                         "primary": true
@@ -1407,12 +1403,12 @@
                                 "selections": [
                                     {
                                         "start": {
-                                            "line": 13,
-                                            "ch": 11
+                                            "line": 12,
+                                            "ch": 60
                                         },
                                         "end": {
-                                            "line": 13,
-                                            "ch": 11
+                                            "line": 12,
+                                            "ch": 60
                                         },
                                         "reversed": false,
                                         "primary": true

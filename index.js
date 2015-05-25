@@ -23,35 +23,57 @@ var PORTS = {
 	deploydServer: 3104
 };
 
+var defaultHost = 'http://localhost';
+
 function startEditor(options) {
 
 	if (!options.projectsDir) {
 		throw new Error('"projectsDir" option is required :)')
 	}
 
+	// CANVAS_CONFIG
+	var CANVAS_CONFIG = {
+		socketHost: options.socketHost || defaultHost,
+		socketPort: options.socketPort || PORTS.socketServer,
+	};
+
 	// stylesheets to be injected
 	var baseInjectStylesheets = [
 		// context menu
-		'http://localhost:' + PORTS.socketServer + '/assets/bower_components/jQuery-contextMenu/src/jquery.contextMenu.css'
+		CANVAS_CONFIG.socketHost + ':' + CANVAS_CONFIG.socketPort + '/assets/bower_components/jQuery-contextMenu/src/jquery.contextMenu.css'
 	];
 
 	// Scripts to be injected into the markedHTML
 	var baseInjectScripts = [
+		// configurations
+		{
+			type: 'tag',
+			name: 'script',
+			attribs: {
+				id: 'teste'
+			},
+			children: [
+				{
+					data: 'window.CANVAS_CONFIG = ' + JSON.stringify(CANVAS_CONFIG)
+				}
+			]
+		},
+
 		// jquery and lodash
-		'http://localhost:' + PORTS.socketServer + '/assets/bower_components/jquery/dist/jquery.js',
-		'http://localhost:' + PORTS.socketServer + '/assets/bower_components/lodash/lodash.js',
+		CANVAS_CONFIG.socketHost + ':' + CANVAS_CONFIG.socketPort + '/assets/bower_components/jquery/dist/jquery.js',
+		CANVAS_CONFIG.socketHost + ':' + CANVAS_CONFIG.socketPort + '/assets/bower_components/lodash/lodash.js',
 		
 		// contextmenu
-		'http://localhost:' + PORTS.socketServer + '/assets/bower_components/jQuery-contextMenu/src/jquery.ui.position.js',
-		'http://localhost:' + PORTS.socketServer + '/assets/bower_components/jQuery-contextMenu/src/jquery.contextMenu.js',
+		CANVAS_CONFIG.socketHost + ':' + CANVAS_CONFIG.socketPort + '/assets/bower_components/jQuery-contextMenu/src/jquery.ui.position.js',
+		CANVAS_CONFIG.socketHost + ':' + CANVAS_CONFIG.socketPort + '/assets/bower_components/jQuery-contextMenu/src/jquery.contextMenu.js',
 
 		// socket.io
-		'http://localhost:' + PORTS.socketServer + '/assets/bower_components/socket.io-client/socket.io.js',
+		CANVAS_CONFIG.socketHost + ':' + CANVAS_CONFIG.socketPort + '/assets/bower_components/socket.io-client/socket.io.js',
 		// domlight
-		'http://localhost:' + PORTS.socketServer + '/assets/node_modules/domlight/domlight.js',
+		CANVAS_CONFIG.socketHost + ':' + CANVAS_CONFIG.socketPort + '/assets/node_modules/domlight/domlight.js',
 
 		// socket connection
-		'http://localhost:' + PORTS.socketServer + '/assets/canvas-socket-connection.js'
+		CANVAS_CONFIG.socketHost + ':' + CANVAS_CONFIG.socketPort + '/assets/canvas-socket-connection.js'
 	];
 
 
@@ -92,17 +114,17 @@ function startEditor(options) {
 		projectsDir: options.projectsDir
 	});
 
-	// deployd proxy server
-	dpdProxy({
-		proxy: {
-			port: PORTS.deploydProxy,
-			resourcesDirectory: options.resourcesDirectory,
-		},
-		deployd: {
-			port: PORTS.deploydServer,
-			env: 'development',
-		}
-	});
+	// // deployd proxy server
+	// dpdProxy({
+	// 	proxy: {
+	// 		port: PORTS.deploydProxy,
+	// 		resourcesDirectory: options.resourcesDirectory,
+	// 	},
+	// 	deployd: {
+	// 		port: PORTS.deploydServer,
+	// 		env: 'development',
+	// 	}
+	// });
 
 
 	// return editor configurations
