@@ -5,7 +5,7 @@
     "welcomeProjects": [
         "/samples/root/Getting Started"
     ],
-    "projectPath": "/projects/app-source/",
+    "projectPath": "/projects/www/",
     "afterFirstLaunch": "true",
     "workingSetSortMethod": "cmd.sortWorkingSetByAdded",
     "lastInfoURLFetchTime": 1432557803560,
@@ -1172,18 +1172,42 @@
                 "panes": {
                     "first-pane": [
                         {
-                            "file": "/projects/app-source/www/templates/playlists.html",
-                            "active": true,
+                            "file": "/projects/www/templates/search.html",
+                            "active": false,
                             "viewState": {
                                 "selections": [
                                     {
                                         "start": {
-                                            "line": 13,
-                                            "ch": 52
+                                            "line": 2,
+                                            "ch": 5
                                         },
                                         "end": {
-                                            "line": 13,
-                                            "ch": 52
+                                            "line": 2,
+                                            "ch": 5
+                                        },
+                                        "reversed": false,
+                                        "primary": true
+                                    }
+                                ],
+                                "scrollPos": {
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            }
+                        },
+                        {
+                            "file": "/projects/www/templates/menu.html",
+                            "active": false,
+                            "viewState": {
+                                "selections": [
+                                    {
+                                        "start": {
+                                            "line": 26,
+                                            "ch": 13
+                                        },
+                                        "end": {
+                                            "line": 26,
+                                            "ch": 13
                                         },
                                         "reversed": false,
                                         "primary": true
@@ -1426,9 +1450,9 @@
         }
     },
     "recentProjects": [
-        "/projects/app-source",
+        "/projects/www",
         "/samples/root/Getting Started",
-        "/projects/app-source/www",
-        "/projects/www"
+        "/projects/app-source",
+        "/projects/app-source/www"
     ]
 }

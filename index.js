@@ -114,17 +114,17 @@ function startEditor(options) {
 		projectsDir: options.projectsDir
 	});
 
-	// // deployd proxy server
-	// dpdProxy({
-	// 	proxy: {
-	// 		port: PORTS.deploydProxy,
-	// 		resourcesDirectory: options.resourcesDirectory,
-	// 	},
-	// 	deployd: {
-	// 		port: PORTS.deploydServer,
-	// 		env: 'development',
-	// 	}
-	// });
+	// deployd proxy server
+	dpdProxy({
+		proxy: {
+			port: PORTS.deploydProxy,
+			resourcesDirectory: options.resourcesDirectory,
+		},
+		deployd: {
+			port: PORTS.deploydServer,
+			env: 'development',
+		}
+	});
 
 
 	// return editor configurations

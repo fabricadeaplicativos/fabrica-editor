@@ -1,3 +1,5 @@
+var path = require('path');
+
 var commander = require('commander');
 
 var startEditor = require('../');
@@ -24,7 +26,8 @@ if(!commander.args.length) {
 	startEditor({
 		projectsDir: projectsDir,
 
-		
+		resourcesDirectory: path.join(__dirname, '..', 'resources'),
+
 		socketHost: socketHost,
 		socketPort: socketPort
 	});
