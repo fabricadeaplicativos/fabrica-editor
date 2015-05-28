@@ -5,10 +5,10 @@
     "welcomeProjects": [
         "/samples/root/Getting Started"
     ],
-    "projectPath": "/projects/www/",
+    "projectPath": "/projects/teste/",
     "afterFirstLaunch": "true",
     "workingSetSortMethod": "cmd.sortWorkingSetByAdded",
-    "lastInfoURLFetchTime": 1432557803560,
+    "lastInfoURLFetchTime": 1432759626840,
     "updateInfo": [
         {
             "buildNumber": 16022,
@@ -1145,7 +1145,7 @@
     ],
     "lastNotifiedBuildNumber": 16022,
     "extensionUpdateInfo": [],
-    "lastExtensionRegistryCheckTime": 1432557803933,
+    "lastExtensionRegistryCheckTime": 1432759628165,
     "project": {
         "/samples/root/Getting Started/": {
             "mainView.state": {
@@ -1447,11 +1447,22 @@
                     ]
                 }
             }
+        },
+        "/projects/teste/": {
+            "mainView.state": {
+                "orientation": null,
+                "activePaneId": "first-pane",
+                "splitPercentage": 1,
+                "panes": {
+                    "first-pane": []
+                }
+            }
         }
     },
     "recentProjects": [
-        "/projects/www",
+        "/projects/teste",
         "/samples/root/Getting Started",
+        "/projects/www",
         "/projects/app-source",
         "/projects/app-source/www"
     ]
