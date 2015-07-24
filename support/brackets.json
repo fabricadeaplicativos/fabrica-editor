@@ -1,4 +1,5 @@
 {
     "debug.showErrorsInStatusBar": false,
-    "linting.collapsed": true
+    "linting.collapsed": true,
+    "fonts.fontSize": "13px"
 }

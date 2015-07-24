@@ -39,6 +39,8 @@ function startEditor(options) {
 
 	// stylesheets to be injected
 	var baseInjectStylesheets = [
+		// canvas styles
+		CANVAS_CONFIG.socketHost + ':' + CANVAS_CONFIG.socketPort + '/assets/canvas-styles.css',
 		// context menu
 		CANVAS_CONFIG.socketHost + ':' + CANVAS_CONFIG.socketPort + '/assets/bower_components/jQuery-contextMenu/src/jquery.contextMenu.css'
 	];

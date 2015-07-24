@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html class="preload">
+  <head>
+    <meta charset="UTF-8">
+
+      <meta name="robots" content="noindex">
+
+    <title>Deconstructed Frosted Glass Effect (Updated)</title>
+    <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+
+
+    
+    <link rel="stylesheet" href="css/reset.css">
+
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600'>
+
+        <style>
+      /* LAYOUT */
+html, body, .glass-parent, .layer, .layer-content {
+  width: 100%;
+  height: 100%;
+}
+
+.glass-parent {
+  max-width: 800px;
+  max-height: 600px;
+  /* center horizontally & vertically */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.layer, .layer-content {
+  position: absolute;
+  top: 0;
+}
+
+.clip .shift {
+  /* hide overflow for moving layers, esp. bg */
+  overflow: hidden;
+}
+
+/* BACKGROUNDS & BORDERS */
+.background {
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/28727/pelican.jpg');
+  background-size: cover;
+}
+
+.tint .layer-content {
+  background-color: white;
+}
+
+/* an independent element so it can have it's own opacity and transform */
+.blur .layer-content::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/28727/pelican-blurred.jpg');
+  background-size: cover;
+  content: ' ';
+  opacity: 0.6;
+}
+
+/* layer outlines */
+.layer, .layer-content {
+  border: 1px solid rgba(51, 51, 51, 0.6);
+  margin: -1px;
+}
+
+/* TRANFORMATIONS */
+body {
+  perspective: 3000px;
+  overflow: hidden;
+}
+
+.glass-parent {
+  transform-style: preserve-3d;
+}
+
+.glass-parent.three-d {
+  transform: rotateY(40deg) rotateX(10deg) translateX(-50%) translateY(-50%);
+}
+
+.three-d .tint {
+  transform: translateZ(50px);
+}
+.three-d .blur {
+  transform: translateZ(100px);
+}
+.three-d .content {
+  transform: translateZ(150px);
+}
+
+.down .shift {
+  transform: translateY(100%) translateY(-7rem);
+}
+
+.up .shift {
+  transform: translateY(0);
+}
+
+.down .blur .layer-content::before {
+  transform: translateY(-100%) translateY(7rem);  
+}
+
+/* TRANSITIONS */
+.preload * {
+  /* Prevent structural elements from transitioning until after page load */
+  transition: none !important;
+}
+
+.glass-parent {
+  transition: transform 0.5s ease-out;
+}
+
+.shift, .shift::before, .layer {
+  transition: transform 0.5s ease-out;
+}
+
+/* TYPOGRAPHY, ETC. */
+body {
+  font-family: 'Source Sans Pro', Verdana, sans-serif;
+  font-size: 100%;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 1.4;
+  font-weight: bold;
+  padding: 0 7rem;
+  text-align: center;
+  overflow: hidden;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+h1::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/28727/double-chevron-up.svg');
+  content: ' ';
+  display: block;
+  width: 7rem;
+  height: 7rem;
+  transition: transform 0.2s ease-out 0.5s;
+}
+
+.up h1::before {
+  transform: rotate(180deg);  
+}
+
+em {
+  font-style: normal;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  max-width: 30em;
+  margin: 1.4em auto;
+  padding: 0 1em;
+}
+
+@media (max-width: 500px), (max-height: 300px) {
+  p.unimportant {
+    display: none;
+  }
+  p {
+    font-size: 1.4rem;
+    margin: 0.5em auto;
+  }
+}
+
+.label {
+  position: absolute;
+  right: 0;
+  top: -1em;
+  border: 1px solid rgba(51, 51, 51, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.5em 0.5em 0 0;
+  display: inline-block;
+  padding: 0.2em;
+  border-bottom-width: 0;
+  transform-origin: bottom left;
+  transform: translateX(100%) rotate(90deg);
+}
+
+/* Options checkboxes */
+.checks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  background-color: white;
+  padding: 0.5em;
+}
+
+label {
+  display: block;
+}
+
+input {
+  vertical-align: middle;
+}
+
+/* Displayed when requirements are not met */
+.requirements {
+  display: none;
+}
+
+.no-csstransforms3d .requirements {
+  display: block;
+}
+
+.requirements {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #a73951;
+  color: white;
+  font: 2em / 1.4 'Russo One', Verdana, sans-serif;
+  width: 100%;
+  text-align: center;
+}
+
+.requirements a {
+  color: rgb(200, 200, 200);
+}
+    </style>
+
+    
+        <script src="js/prefixfree.min.js"></script>
+
+    
+  </head>
+
+  <body>
+
+    <!-- This markup differs from the original frosted glass example to make some of the effects possible. In general, there are just a lot more elements. -->
+<div class='glass-parent up three-d clip'>
+  <div class='background layer'>
+    <span class='label'>original image</span>
+  </div>
+  <div class='tint layer'>
+    <span class='label'>color tint</span>
+    <div class='shift layer-content'></div>
+  </div>
+  <div class='blur layer'>
+    <span class='label'>blurred image</span>
+    <div class='shift layer-content'></div>
+  </div>
+  <div class='content layer'>
+    <span class='label'>content</span>
+
+    <div class='shift layer-content'>
+      <h1 onclick='toggle()'>Pelican</h1>
+      <p class='unimportant'><em>Pel"i*can</em>, n. Etym: [F. p&eacute;lican, L. pelicanus, pelecanus, Gr. para&ccedil;u.] [Written also pelecan.] 1. (Zo&ouml;l.)</p>
+
+      <p><em>Defn:</em> Any large webfooted bird of the genus of Pelecanus, of which about a dozen species are known. They have an enormous bill, to the lower edge of which is attached a pouch in which captured fishes are temporarily stored.</p>
+
+      <p class='unimportant'><em>Note:</em> The American white pelican (<em>Pelecanus erythrorhynchos</em>) and the brown species (<em>P. fuscus</em>) are abundant on the Florida coast in winter, but breed about the lakes in the Rocky Mountains and British America.</p>
+    </div>
+  </div>
+</div>
+<div class='checks'>
+  Show Layers:
+  <label><input id='contentCheck' type='checkbox' checked onchange='toggleChecks()'/>content</label>
+  <label><input id='blurCheck' type='checkbox' checked onchange='toggleChecks()'/>blurred image</label>
+  <label><input id='tintCheck' type='checkbox' checked onchange='toggleChecks()'/>color tint</label>
+  <label><input id='bgCheck' type='checkbox' checked onchange='toggleChecks()'/>original image</label>
+  Show Effects:
+  <label><input id='check3d' type='checkbox' checked onchange='toggleChecks()'/>3D pull apart</label>
+  <label><input id='clipCheck' type='checkbox' checked onchange='toggleChecks()'/>clip to content</label>
+</div>
+<div class='requirements'>This demo (ab)uses CSS 3D Transforms, and it doesn't look like your browser supports those. Find out more about <a href='http://caniuse.com/#feat=transforms3d'>browser support for 3D Transforms</a>.
+<!-- Image by Yair Hazout via unsplash.com -->
+<!-- Text from Webster's Unabridged Dictionary via Project Gutenberg -->
+    
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

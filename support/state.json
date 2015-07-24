@@ -5,10 +5,10 @@
     "welcomeProjects": [
         "/samples/root/Getting Started"
     ],
-    "projectPath": "/projects/teste/",
+    "projectPath": "/projects/app-source/",
     "afterFirstLaunch": "true",
     "workingSetSortMethod": "cmd.sortWorkingSetByAdded",
-    "lastInfoURLFetchTime": 1432759626840,
+    "lastInfoURLFetchTime": 1437055398610,
     "updateInfo": [
         {
             "buildNumber": 16022,
@@ -1145,7 +1145,7 @@
     ],
     "lastNotifiedBuildNumber": 16022,
     "extensionUpdateInfo": [],
-    "lastExtensionRegistryCheckTime": 1432759628165,
+    "lastExtensionRegistryCheckTime": 1437055396623,
     "project": {
         "/samples/root/Getting Started/": {
             "mainView.state": {
@@ -1340,6 +1340,10 @@
             "project.treeState": [
                 [
                     "/projects/app-source/www/"
+                ],
+                [
+                    "/projects/app-source/www/js/",
+                    "/projects/app-source/www/templates/"
                 ]
             ],
             "mainView.state": {
@@ -1349,18 +1353,66 @@
                 "panes": {
                     "first-pane": [
                         {
+                            "file": "/projects/app-source/www/templates/search.html",
+                            "active": false,
+                            "viewState": {
+                                "selections": [
+                                    {
+                                        "start": {
+                                            "line": 11,
+                                            "ch": 13
+                                        },
+                                        "end": {
+                                            "line": 11,
+                                            "ch": 13
+                                        },
+                                        "reversed": false,
+                                        "primary": true
+                                    }
+                                ],
+                                "scrollPos": {
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            }
+                        },
+                        {
+                            "file": "/projects/app-source/www/templates/playlists.html",
+                            "active": true,
+                            "viewState": {
+                                "selections": [
+                                    {
+                                        "start": {
+                                            "line": 34,
+                                            "ch": 21
+                                        },
+                                        "end": {
+                                            "line": 34,
+                                            "ch": 21
+                                        },
+                                        "reversed": false,
+                                        "primary": true
+                                    }
+                                ],
+                                "scrollPos": {
+                                    "x": 0,
+                                    "y": 342
+                                }
+                            }
+                        },
+                        {
                             "file": "/projects/app-source/www/js/controllers.js",
                             "active": false,
                             "viewState": {
                                 "selections": [
                                     {
                                         "start": {
-                                            "line": 0,
-                                            "ch": 0
+                                            "line": 51,
+                                            "ch": 31
                                         },
                                         "end": {
-                                            "line": 0,
-                                            "ch": 0
+                                            "line": 51,
+                                            "ch": 31
                                         },
                                         "reversed": false,
                                         "primary": true
@@ -1368,79 +1420,7 @@
                                 ],
                                 "scrollPos": {
                                     "x": 0,
-                                    "y": 627
-                                }
-                            }
-                        },
-                        {
-                            "file": "/projects/app-source/www/templates/playlists.html",
-                            "active": false,
-                            "viewState": {
-                                "selections": [
-                                    {
-                                        "start": {
-                                            "line": 6,
-                                            "ch": 25
-                                        },
-                                        "end": {
-                                            "line": 6,
-                                            "ch": 25
-                                        },
-                                        "reversed": false,
-                                        "primary": true
-                                    }
-                                ],
-                                "scrollPos": {
-                                    "x": 0,
-                                    "y": 0
-                                }
-                            }
-                        },
-                        {
-                            "file": "/projects/app-source/www/templates/menu.html",
-                            "active": false,
-                            "viewState": {
-                                "selections": [
-                                    {
-                                        "start": {
-                                            "line": 23,
-                                            "ch": 14
-                                        },
-                                        "end": {
-                                            "line": 23,
-                                            "ch": 14
-                                        },
-                                        "reversed": false,
-                                        "primary": true
-                                    }
-                                ],
-                                "scrollPos": {
-                                    "x": 0,
-                                    "y": 0
-                                }
-                            }
-                        },
-                        {
-                            "file": "/projects/app-source/www/templates/search.html",
-                            "active": true,
-                            "viewState": {
-                                "selections": [
-                                    {
-                                        "start": {
-                                            "line": 12,
-                                            "ch": 60
-                                        },
-                                        "end": {
-                                            "line": 12,
-                                            "ch": 60
-                                        },
-                                        "reversed": false,
-                                        "primary": true
-                                    }
-                                ],
-                                "scrollPos": {
-                                    "x": 0,
-                                    "y": 0
+                                    "y": 673
                                 }
                             }
                         }
@@ -1457,13 +1437,25 @@
                     "first-pane": []
                 }
             }
+        },
+        "/projects/frosted-glass/": {
+            "project.treeState": [],
+            "mainView.state": {
+                "orientation": null,
+                "activePaneId": "first-pane",
+                "splitPercentage": 1,
+                "panes": {
+                    "first-pane": []
+                }
+            }
         }
     },
     "recentProjects": [
-        "/projects/teste",
-        "/samples/root/Getting Started",
-        "/projects/www",
         "/projects/app-source",
+        "/projects/frosted-glass",
+        "/samples/root/Getting Started",
+        "/projects/teste",
+        "/projects/www",
         "/projects/app-source/www"
     ]
 }
