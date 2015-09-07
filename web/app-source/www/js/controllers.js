@@ -3,6 +3,10 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
   // Form data for the login modal
   $scope.loginData = {};
+    
+    $scope.fazerAlgo = function (algumacosa) {
+    alert( algumacosa);  
+    };
 
   // Create the login modal that we will use later
   $ionicModal.fromTemplateUrl('templates/login.html', {
@@ -19,6 +23,10 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
 $scope.falaAe = function() {
  alert('oi');   
 };
+    
+    $scope.falar = function(a) {
+        alert(a);
+    };
 
   // Open the login modal
   $scope.login = function() {
@@ -38,14 +46,14 @@ $scope.falaAe = function() {
 })
 
 .controller('PlaylistsCtrl', function($scope, $cordovaCamera, $cordovaImagePicker) {
-  // $scope.playlists = [
-  //   { title: 'Reggae', id: 1 },
-  //   { title: 'Chill', id: 2 },
-  //   { title: 'Dubstep', id: 3 },
-  //   { title: 'Indie', id: 4 },
-  //   { title: 'Rap', id: 5 },
-  //   { title: 'Cowbell', id: 6 }
-  // ];
+   $scope.playlists = [
+     { title: 'Reggae', id: 1 },
+     { title: 'Chill', id: 2 },
+     { title: 'Dubstep', id: 3 },
+     { title: 'Indie', id: 4 },
+     { title: 'Rap', id: 5 },
+     { title: 'Cowbell', id: 6 }
+   ];
 
   $scope.alertPlaylistTitle = function (playlist) {
     alert(playlist.title);
@@ -56,6 +64,7 @@ $scope.falaAe = function() {
   }
 
   $scope.takePicture = function(playlist) {
+      alert('oi')
     var options = {
       quality: 50,
       allowEdit: true,
